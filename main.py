@@ -35,11 +35,7 @@ def write_state(state):
 
 
 def missing_states():
-    missing = []
-    for state in state_namelist:
-        if state not in guessed_list:
-            missing.append(state)
-    return missing
+    return [state for state in state_namelist if state not in guessed_list]
 
 
 def write_csv(states):
